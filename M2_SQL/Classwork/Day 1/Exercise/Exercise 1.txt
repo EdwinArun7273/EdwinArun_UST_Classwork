@@ -1,0 +1,18 @@
+CREATE DATABASE store;
+USE store;
+
+CREATE TABLE book(bookid int, bookname varchar(20), author varchar(20), price int);
+INSERT INTO book VALUES(1, 'C', 'Balaguru Swamy', 150);
+INSERT INTO book VALUES(2, 'C++', 'Balaguru Swamy', 175);
+INSERT INTO book VALUES(3, 'Java', 'Balaguru Swamy', 300);
+INSERT INTO book VALUES(4, 'Oracle', 'Rish', 850);
+INSERT INTO book VALUES(5, 'MySQL', 'Manohar', 400);
+
+SELECT * FROM book;
+SELECT author FROM book WHERE bookname='MySQL';
+SELECT price FROM book WHERE bookname='Oracle';
+SELECT bookname FROM book WHERE author='Balaguru Swamy';
+SELECT count(bookname) FROM book;
+SELECT bookid FROM book WHERE bookname='Java';
+SELECT bookname FROM book WHERE price > 200;
+SELECT count(bookid) FROM book WHERE author='Balaguru Swamy';

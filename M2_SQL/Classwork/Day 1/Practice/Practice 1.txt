@@ -1,0 +1,46 @@
+DATABASE CREATION AND ACTIVATION
+
+CREATE DATABASE sqldemo;
+USE sqldemo;
+
+CREATING TABLE AND INSERTING VALUES
+
+CREATE TABLE emp(empid int, empname varchar(20), sal int, city varchar(20));
+INSERT INTO emp VALUES(1, 'User1', 20000, 'Ernakulam');
+INSERT INTO emp VALUES(2, 'User2', 21000, 'Idukki');
+INSERT INTO emp VALUES(3, 'User3', 22000, 'Kollam');
+INSERT INTO emp VALUES(4, 'User4', 23000, 'Trivandrum');
+INSERT INTO emp VALUES(5, 'User5', 24000, 'Alappuzha');
+
+DISPLAY, UPDATE AND DELETE FUNCTIONS
+
+SELECT * FROM emp;
+SELECT City FROM emp;
+SELECT empname, city FROM emp;
+SELECT * FROM emp WHERE sal > 22500;
+SELECT sal FROM emp WHERE empname = 'User2';
+UPDATE emp SET sal=sal+10000 WHERE city = 'Ernakulam';
+DELETE FROM emp WHERE city = 'Idukki';
+
+AGGREGATE FUNCTIONS
+
+SELECT SUM(sal) FROM emp;
+SELECT AVG(sal) FROM emp;
+SELECT count(empid) FROM emp;
+SELECT MIN(sal) FROM emp;
+SELECT MAX(sal) FROM emp;
+
+RENAME A TABLE
+     RENAME TABLE emp to employee;
+ADDING NEW COLUMN TO THE EXISTING TABLE
+     ALTER TABLE employee ADD COLUMN deptname varchar(20);
+DROP COLUMN FROM THE EXISTING TABLE
+     ALTER TABLE employee DROP deptname;
+SHOW ALL TABLES IN THE SYSTEM
+     SHOW TABLES;
+SHOW ALL DATABASES IN THE SYSTEM
+     SHOW DATABASES;
+SHOW THE STRUCTRE OF THE TABLE
+     DESC employee;
+DROP TABLE 
+     DROP TABLE employee;

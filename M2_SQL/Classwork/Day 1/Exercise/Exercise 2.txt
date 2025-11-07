@@ -1,0 +1,27 @@
+CREATE DATABASE Edwin;
+USE Edwin;
+
+CREATE TABLE Student(rollno int, studentname varchar(20), age int);
+
+DESC Student;
+
+ALTER TABLE Student ADD COLUMN dept varchar(20);
+
+DESC Student;
+
+ALTER TABLE Student RENAME COLUMN rollno TO id;
+
+INSERT INTO Student VALUES(1, 'user1', 22, 'testing');
+INSERT INTO Student VALUES(2, 'user2', 23, 'dev');
+INSERT INTO Student VALUES(3, 'user3', 21, 'hr');
+
+ALTER TABLE Student ADD COLUMN mobileno int;
+
+UPDATE Student SET mobileno = 123456789 WHERE id = 1;
+UPDATE Student SET mobileno = 234567890 WHERE id = 2;
+UPDATE Student SET mobileno = 345678901 WHERE id = 3;
+
+ALTER TABLE Student DROP COLUMN age;
+
+UPDATE Student SET dept = 'development' WHERE dept = 'dev';
+UPDATE Student SET dept = 'human resourse' WHERE dept = 'hr';
